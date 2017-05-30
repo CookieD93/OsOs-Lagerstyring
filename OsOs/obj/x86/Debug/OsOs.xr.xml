@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Roots >
+  <Roots.Interfaces>
+    <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
+  </Roots.Interfaces>
+  <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="Username" />
+    <RootPropertyPathName Name="ReportBigView" />
+    <RootPropertyPathName Name="GrundBigView" />
+    <RootPropertyPathName Name="OrderBigView" />
+    <RootPropertyPathName Name="LagerBigView" />
+    <RootPropertyPathName Name="GrundSmallView" />
+    <RootPropertyPathName Name="ReportSmallView" />
+    <RootPropertyPathName Name="OrderSmallView" />
+    <RootPropertyPathName Name="LagerSmallView" />
+    <RootPropertyPathName Name="Description" />
+    <RootPropertyPathName Name="Name" />
+    <RootPropertyPathName Name="Unit1" />
+    <RootPropertyPathName Name="OneDeleteButtonToRuleThemAllCommand" />
+    <RootPropertyPathName Name="SubmitProduct" />
+    <RootPropertyPathName Name="ProductBarcode" />
+    <RootPropertyPathName Name="UnitName" />
+    <RootPropertyPathName Name="ToggleVisibilityUnitList" />
+    <RootPropertyPathName Name="ProductDescription" />
+    <RootPropertyPathName Name="ToggleVisibilityProductList" />
+    <RootPropertyPathName Name="ProductName" />
+    <RootPropertyPathName Name="IsVisibleOverlaySearch" />
+    <RootPropertyPathName Name="ClearProductListViewCommand" />
+    <RootPropertyPathName Name="IsVisibleProductList" />
+    <RootPropertyPathName Name="ClearUnitListViewCommand" />
+    <RootPropertyPathName Name="IsVisibleUnitList" />
+    <RootPropertyPathName Name="SetSelectedProductCommand" />
+    <RootPropertyPathName Name="SetSelectedUnitCommand" />
+    <RootPropertyPathName Name="SelectedItemProduct" />
+    <RootPropertyPathName Name="FilteredProducts" />
+    <RootPropertyPathName Name="SelectedItemUnit" />
+    <RootPropertyPathName Name="FilteredUnits" />
+    <RootPropertyPathName Name="OverlaySearchTerm" />
+    <RootPropertyPathName Name="OverlaySearchHeader" />
+    <RootPropertyPathName Name="CloseOverlaySearchCommand" />
+    <RootPropertyPathName Name="Employee_Function" />
+    <RootPropertyPathName Name="ClearFormCommand" />
+    <RootPropertyPathName Name="ClearFormView" />
+    <RootPropertyPathName Name="UpdateEmplCommand" />
+    <RootPropertyPathName Name="UpdateEmployeeView" />
+    <RootPropertyPathName Name="RemoveEmployee" />
+    <RootPropertyPathName Name="DeleteEmployeeView" />
+    <RootPropertyPathName Name="SubmitEmployee" />
+    <RootPropertyPathName Name="CreateEmployeeView" />
+    <RootPropertyPathName Name="ToggleVisibilityEmployeeFunctionsList" />
+    <RootPropertyPathName Name="Function" />
+    <RootPropertyPathName Name="LoginCode" />
+    <RootPropertyPathName Name="ResetPasswordCommand" />
+    <RootPropertyPathName Name="PasswordResetButtonView" />
+    <RootPropertyPathName Name="Password" />
+    <RootPropertyPathName Name="EmployeeName" />
+    <RootPropertyPathName Name="ToggleVisibilityEmployeeList" />
+    <RootPropertyPathName Name="ClearEmployeeFunctionsListViewCommand" />
+    <RootPropertyPathName Name="IsVisibleEmployeeFunctionsList" />
+    <RootPropertyPathName Name="ClearEmployeeListViewCommand" />
+    <RootPropertyPathName Name="IsVisibleEmployeeList" />
+    <RootPropertyPathName Name="SetSelectedEmployeeFunctionsCommand" />
+    <RootPropertyPathName Name="SetSelectedEmployeeCommand" />
+    <RootPropertyPathName Name="SelectedItemEmployeeFunctions" />
+    <RootPropertyPathName Name="FilteredEmployeeFunctions" />
+    <RootPropertyPathName Name="SelectedItemEmployee" />
+    <RootPropertyPathName Name="FilteredEmployees" />
+    <RootPropertyPathName Name="SubmitUnit" />
+    <RootPropertyPathName Name="Country" />
+    <RootPropertyPathName Name="Iso" />
+    <RootPropertyPathName Name="Address" />
+    <RootPropertyPathName Name="Town" />
+    <RootPropertyPathName Name="CountryCode" />
+    <RootPropertyPathName Name="SubmitCustomer" />
+    <RootPropertyPathName Name="Email" />
+    <RootPropertyPathName Name="Phone" />
+    <RootPropertyPathName Name="ToggleVisibilityCountryCodeList" />
+    <RootPropertyPathName Name="CountryName" />
+    <RootPropertyPathName Name="CountryIso" />
+    <RootPropertyPathName Name="PostalCode" />
+    <RootPropertyPathName Name="Address2" />
+    <RootPropertyPathName Name="Address1" />
+    <RootPropertyPathName Name="ToggleVisibilityCustomerList" />
+    <RootPropertyPathName Name="CustomerName" />
+    <RootPropertyPathName Name="ClearCountryCodeListViewCommand" />
+    <RootPropertyPathName Name="IsVisibleCountryCodeList" />
+    <RootPropertyPathName Name="SetSelectedCountryCodeCommand" />
+    <RootPropertyPathName Name="ClearCustomerListViewCommand" />
+    <RootPropertyPathName Name="IsVisibleCustomerList" />
+    <RootPropertyPathName Name="SetSelectedCustomerCommand" />
+    <RootPropertyPathName Name="SelectedItemCountryCode" />
+    <RootPropertyPathName Name="FilteredCountries" />
+    <RootPropertyPathName Name="SelectedItemCustomer" />
+    <RootPropertyPathName Name="FilteredCustomers" />
+    <RootPropertyPathName Name="Quantity" />
+    <RootPropertyPathName Name="Product" />
+    <RootPropertyPathName Name="Reserved" />
+    <RootPropertyPathName Name="Location" />
+    <RootPropertyPathName Name="SubmitGenerateLocations" />
+    <RootPropertyPathName Name="EndHeight" />
+    <RootPropertyPathName Name="StartHeight" />
+    <RootPropertyPathName Name="EndSpace" />
+    <RootPropertyPathName Name="StartSpace" />
+    <RootPropertyPathName Name="Row" />
+    <RootPropertyPathName Name="SubmitLocation" />
+    <RootPropertyPathName Name="IsVisibleSearchProduct" />
+    <RootPropertyPathName Name="ToggleVisibilitySearchProduct" />
+    <RootPropertyPathName Name="ToggleVisibilityLocationList" />
+    <RootPropertyPathName Name="LocationId" />
+    <RootPropertyPathName Name="ClearLocationListViewCommand" />
+    <RootPropertyPathName Name="IsVisibleLocationList" />
+    <RootPropertyPathName Name="SetSelectedLocationCommand" />
+    <RootPropertyPathName Name="SelectedItemLocation" />
+    <RootPropertyPathName Name="FilteredLocations" />
+    <RootPropertyPathName Name="SubmitDepositButtonCommand" />
+    <RootPropertyPathName Name="Amount" />
+    <RootPropertyPathName Name="DateToday" />
+    <RootPropertyPathName Name="BatchNo" />
+    <RootPropertyPathName Name="FilteredToLocation" />
+    <RootPropertyPathName Name="SubmitMoveButtonCommand" />
+    <RootPropertyPathName Name="LocationIdSecond" />
+    <RootPropertyPathName Name="ToggleVisibilitySecondLocationList" />
+    <RootPropertyPathName Name="ClearSecondLocationListViewCommand" />
+    <RootPropertyPathName Name="IsVisibleSecondLocationList" />
+    <RootPropertyPathName Name="SetSelectedSecondLocationCommand" />
+    <RootPropertyPathName Name="SelectedItemSecondLocation" />
+    <RootPropertyPathName Name="FilteredFromLocation" />
+    <RootPropertyPathName Name="PickedAmount" />
+    <RootPropertyPathName Name="OrderedAmount" />
+    <RootPropertyPathName Name="Order_Line" />
+    <RootPropertyPathName Name="Count" />
+    <RootPropertyPathName Name="Date" />
+    <RootPropertyPathName Name="Customer" />
+    <RootPropertyPathName Name="Id" />
+    <RootPropertyPathName Name="IsVisibleOrderProcessOverlay" />
+    <RootPropertyPathName Name="CancleOrderProcessCommand" />
+    <RootPropertyPathName Name="OrderLines" />
+    <RootPropertyPathName Name="OrderAddress" />
+    <RootPropertyPathName Name="Postal" />
+    <RootPropertyPathName Name="OrderNumber" />
+    <RootPropertyPathName Name="ToggleVisibilityProcessOrder" />
+    <RootPropertyPathName Name="Orders" />
+    <RootPropertyPathName Name="SelectedItemOrder" />
+    <RootPropertyPathName Name="SubmitWithdrawButtonCommand" />
+    <RootPropertyPathName Name="SelectedItemOrderLine" />
+    <RootPropertyPathName Name="RemoveSelectedOrderLineCommand" />
+    <RootPropertyPathName Name="AddProductToOrderCommand" />
+    <RootPropertyPathName Name="AddressPhone" />
+    <RootPropertyPathName Name="AddressEmail" />
+    <RootPropertyPathName Name="AddressCountryName" />
+    <RootPropertyPathName Name="AddressCountryIso" />
+    <RootPropertyPathName Name="AddressTown" />
+    <RootPropertyPathName Name="AddressPostal" />
+    <RootPropertyPathName Name="AddressName" />
+    <RootPropertyPathName Name="IsVisibleSearchAddress" />
+    <RootPropertyPathName Name="ToggleVisibilityAddressList" />
+    <RootPropertyPathName Name="ToggleVisibilitySearchAddress" />
+    <RootPropertyPathName Name="OrderDate" />
+    <RootPropertyPathName Name="ToggleVisibilityOrderList" />
+    <RootPropertyPathName Name="OrderId" />
+    <RootPropertyPathName Name="SubmitDeleteButtonCommand" />
+    <RootPropertyPathName Name="SubmitSaveButtonCommand" />
+    <RootPropertyPathName Name="ClearAddressListViewCommand" />
+    <RootPropertyPathName Name="IsVisibleAddressList" />
+    <RootPropertyPathName Name="ClearOrderListViewCommand" />
+    <RootPropertyPathName Name="IsVisibleOrderList" />
+    <RootPropertyPathName Name="SetSelectedAddressCommand" />
+    <RootPropertyPathName Name="SetSelectedOrderCommand" />
+    <RootPropertyPathName Name="SelectedItemAddress" />
+    <RootPropertyPathName Name="FilteredAddresses" />
+    <RootPropertyPathName Name="FilteredOrders" />
+    <RootPropertyPathName Name="Singleton" />
+    <RootPropertyPathName Name="Order" />
+    <RootPropertyPathName Name="Products" />
+    <RootPropertyPathName Name="Locations" />
+  </Roots.PropertyPathNames>
+  <Roots.RootTypes>
+    <RootType FullName="Windows.UI.Xaml.Application">
+      <RootProperty Name="RequestedTheme" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Page">
+      <RootProperty Name="Content" />
+      <RootProperty Name="Resources" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Grid">
+      <RootProperty Name="Background" />
+      <RootProperty Name="RowDefinitions" />
+      <RootProperty Name="ColumnDefinitions" />
+      <RootProperty Name="Children" />
+      <RootProperty Name="Padding" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="DataContext" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
+      <RootMethod Name="GetColumnSpan" />
+      <RootMethod Name="SetColumnSpan" />
+      <RootMethod Name="GetRow" />
+      <RootMethod Name="SetRow" />
+      <RootMethod Name="GetColumn" />
+      <RootMethod Name="SetColumn" />
+      <RootMethod Name="GetRowSpan" />
+      <RootMethod Name="SetRowSpan" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
+      <RootProperty Name="Height" />
+      <RootProperty Name="MinHeight" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
+      <RootProperty Name="Width" />
+      <RootProperty Name="MinWidth" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="Height" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Padding" />
+      <RootProperty Name="Children" />
+      <RootProperty Name="Orientation" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Content" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="CommandParameter" />
+      <RootProperty Name="Style" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="Padding" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Command" />
+      <RootProperty Name="Flyout" />
+      <RootProperty Name="Width" />
+      <RootEvent Name="Click" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.Interactivity.Interaction">
+      <RootMethod Name="GetBehaviors" />
+      <RootMethod Name="SetBehaviors" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.Interactions.Core.EventTriggerBehavior">
+      <RootProperty Name="EventName" />
+      <RootProperty Name="Actions" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.Interactions.Core.NavigateToPageAction">
+      <RootProperty Name="TargetPage" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="MaxLength" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="IsReadOnly" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="MinWidth" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
+      <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="ElementName" />
+      <RootProperty Name="Mode" />
+      <RootProperty Name="UpdateSourceTrigger" />
+      <RootProperty Name="Converter" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Image">
+      <RootProperty Name="Source" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="OsOs.MainPage" />
+    <RootType FullName="Windows.UI.Xaml.Data.CollectionViewSource">
+      <RootProperty Name="IsSourceGrouped" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.MenuFlyoutPresenter" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Control">
+      <RootProperty Name="Background" />
+      <RootProperty Name="Template" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="Padding" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="FontWeight" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="UseSystemFocusVisuals" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.MenuFlyoutItem">
+      <RootProperty Name="Text" />
+      <RootProperty Name="Foreground" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.FrameworkElement">
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.MenuFlyout">
+      <RootProperty Name="MenuFlyoutPresenterStyle" />
+      <RootProperty Name="Items" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Setter">
+      <RootProperty Name="Property" />
+      <RootProperty Name="Value" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ControlTemplate">
+      <RootProperty Name="TargetType" />
+      <RootProperty Name="Template" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.VisualStateManager">
+      <RootMethod Name="GetVisualStateGroups" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.TemplateBindingExtension" />
+    <RootType FullName="Windows.UI.Xaml.VisualStateGroup">
+      <RootProperty Name="States" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.VisualState">
+      <RootProperty Name="Storyboard" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.Storyboard">
+      <RootProperty Name="Children" />
+      <RootMethod Name="GetTargetName" />
+      <RootMethod Name="SetTargetName" />
+      <RootMethod Name="GetTargetProperty" />
+      <RootMethod Name="SetTargetProperty" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames">
+      <RootProperty Name="KeyFrames" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.PointerUpThemeAnimation" />
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.DiscreteObjectKeyFrame">
+      <RootProperty Name="KeyTime" />
+      <RootProperty Name="Value" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ContentPresenter">
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="ContentTransitions" />
+      <RootProperty Name="ContentTemplate" />
+      <RootProperty Name="Padding" />
+      <RootProperty Name="HorizontalContentAlignment" />
+      <RootProperty Name="VerticalContentAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="TextWrapping" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Automation.AutomationProperties">
+      <RootMethod Name="GetAccessibilityView" />
+      <RootMethod Name="SetAccessibilityView" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.PointerDownThemeAnimation" />
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="Text" />
+      <RootProperty Name="TextTrimming" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="FontWeight" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Opacity" />
+      <RootProperty Name="MaxWidth" />
+      <RootProperty Name="Inlines" />
+    </RootType>
+    <RootType FullName="OsOs.ViewModel.ForsideViewModel" />
+    <RootType FullName="OsOs.View.ForsideView" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Primitives.ToggleButton">
+      <RootProperty Name="IsChecked" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="IsThreeState" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.DataTemplate">
+      <RootProperty Name="Template" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="OsOs.ViewModel.DataViewModel" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Canvas">
+      <RootMethod Name="GetZIndex" />
+      <RootMethod Name="SetZIndex" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Fill" />
+      <RootProperty Name="Opacity" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Stroke" />
+      <RootProperty Name="StrokeThickness" />
+      <RootProperty Name="UseLayoutRounding" />
+      <RootProperty Name="Visibility" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
+      <RootProperty Name="Icon" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="RenderTransformOrigin" />
+      <RootProperty Name="RenderTransform" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="SelectedItem" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="MinHeight" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.CompositeTransform">
+      <RootProperty Name="ScaleX" />
+      <RootProperty Name="ScaleY" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.Interactions.Core.InvokeCommandAction">
+      <RootProperty Name="Command" />
+    </RootType>
+    <RootType FullName="OsOs.View.Grunddata.ArtikelregisterView" />
+    <RootType FullName="OsOs.View.Grunddata.BrugereView" />
+    <RootType FullName="OsOs.View.Grunddata.EnhederView" />
+    <RootType FullName="OsOs.View.Grunddata.KunderView" />
+    <RootType FullName="Windows.UI.Xaml.Controls.CheckBox">
+      <RootProperty Name="IsThreeState" />
+      <RootProperty Name="IsChecked" />
+      <RootProperty Name="IsDoubleTapEnabled" />
+      <RootProperty Name="IsHoldingEnabled" />
+      <RootProperty Name="IsRightTapEnabled" />
+      <RootProperty Name="IsTapEnabled" />
+      <RootProperty Name="ManipulationMode" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Documents.Run">
+      <RootProperty Name="Text" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.DoubleAnimation">
+      <RootProperty Name="To" />
+      <RootProperty Name="Duration" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.FontIcon">
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="Glyph" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="Opacity" />
+    </RootType>
+    <RootType FullName="OsOs.View.Grunddata.LagerpladserView" />
+    <RootType FullName="OsOs.Utilities.DateFormatConverter" />
+    <RootType FullName="OsOs.ViewModel.WareHouseViewModel" />
+    <RootType FullName="OsOs.View.Lager.IndlagningView" />
+    <RootType FullName="OsOs.View.Lager.OmflytningView" />
+    <RootType FullName="OsOs.View.Lager.OpgavekoView" />
+    <RootType FullName="OsOs.View.Lager.UdtagView" />
+    <RootType FullName="OsOs.ViewModel.OrderViewModel" />
+    <RootType FullName="OsOs.View.Ordre.KundeOrdreView" />
+    <RootType FullName="OsOs.View.Ordre.OrdreOversigtView" />
+    <RootType FullName="OsOs.ViewModel.ReportViewModel" />
+    <RootType FullName="OsOs.View.Rapport.SaldolisteView" />
+    <RootType FullName="OsOs.View.Rapport.UdleveringslisteView" />
+  </Roots.RootTypes>
+</Roots>

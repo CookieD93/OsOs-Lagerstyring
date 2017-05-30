@@ -1,0 +1,16 @@
+App.xbf
+MainPage.xbf
+View\ForsideView.xbf
+View\Grunddata\ArtikelregisterView.xbf
+View\Grunddata\BrugereView.xbf
+View\Grunddata\EnhederView.xbf
+View\Grunddata\KunderView.xbf
+View\Grunddata\LagerpladserView.xbf
+View\Lager\IndlagningView.xbf
+View\Lager\OmflytningView.xbf
+View\Lager\OpgavekoView.xbf
+View\Lager\UdtagView.xbf
+View\Ordre\KundeOrdreView.xbf
+View\Ordre\OrdreOversigtView.xbf
+View\Rapport\SaldolisteView.xbf
+View\Rapport\UdleveringslisteView.xbf

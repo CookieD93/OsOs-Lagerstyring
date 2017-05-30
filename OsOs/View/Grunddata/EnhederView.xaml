@@ -1,0 +1,638 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OsOs.View.Grunddata"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:ViewModel="using:OsOs.ViewModel"
+    x:Class="OsOs.View.Grunddata.EnhederView"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <CollectionViewSource x:Key="cvs" x:Name="cvs" IsSourceGrouped="True"/>
+
+        <!-- Custom Style for Windows.UI.Xaml.Controls.Primitives.ToggleButton -->
+        <Style TargetType="ToggleButton">
+            <Setter Property="Background" Value="#CFD8DC" />
+            <Setter Property="Foreground" Value="{ThemeResource SystemControlForegroundBaseHighBrush}"/>
+            <Setter Property="BorderBrush" Value="{ThemeResource SystemControlForegroundTransparentBrush}" />
+            <Setter Property="BorderThickness" Value="{ThemeResource ToggleButtonBorderThemeThickness}" />
+            <Setter Property="Padding" Value="8,4,8,4" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}" />
+            <Setter Property="FontWeight" Value="Normal" />
+            <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}" />
+            <Setter Property="UseSystemFocusVisuals" Value="True" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ToggleButton">
+                        <Grid x:Name="RootGrid" Background="{TemplateBinding Background}">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <Storyboard>
+                                            <PointerUpThemeAnimation Storyboard.TargetName="RootGrid" />
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="PointerOver">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid"
+                                               Storyboard.TargetProperty="Background">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#607D8B" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
+                                               Storyboard.TargetProperty="BorderBrush">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#455A64" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
+                                                   Storyboard.TargetProperty="Foreground">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#fff" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <PointerUpThemeAnimation Storyboard.TargetName="RootGrid" />
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid"
+                                               Storyboard.TargetProperty="Background">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#455A64" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
+                                                   Storyboard.TargetProperty="BorderBrush">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#455A64" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
+                                                   Storyboard.TargetProperty="Foreground">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#fff" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <PointerDownThemeAnimation Storyboard.TargetName="RootGrid" />
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Disabled">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid"
+                                               Storyboard.TargetProperty="Background">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlBackgroundBaseLowBrush}" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
+                                               Storyboard.TargetProperty="Foreground">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlDisabledBaseMediumLowBrush}" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
+                                                   Storyboard.TargetProperty="BorderBrush">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlDisabledTransparentBrush}" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Checked">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid"
+                                               Storyboard.TargetProperty="Background">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#8BC34A" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
+                                               Storyboard.TargetProperty="Foreground">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#fff" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
+                                               Storyboard.TargetProperty="BorderBrush">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#8BC34A" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <PointerUpThemeAnimation Storyboard.TargetName="RootGrid" />
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="CheckedPointerOver">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid"
+                                               Storyboard.TargetProperty="Background">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#8BC34A" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
+                                               Storyboard.TargetProperty="BorderBrush">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#455A64" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
+                                               Storyboard.TargetProperty="Foreground">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#fff" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <PointerUpThemeAnimation Storyboard.TargetName="RootGrid" />
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="CheckedPressed">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid"
+                                               Storyboard.TargetProperty="Background">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#455A64" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
+                                               Storyboard.TargetProperty="BorderBrush">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="Transparent" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <PointerDownThemeAnimation Storyboard.TargetName="RootGrid" />
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <ContentPresenter x:Name="ContentPresenter"
+                          BorderBrush="{TemplateBinding BorderBrush}"
+                          BorderThickness="{TemplateBinding BorderThickness}"
+                          Content="{TemplateBinding Content}"
+                          ContentTransitions="{TemplateBinding ContentTransitions}"
+                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                          Padding="{TemplateBinding Padding}"
+                          HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                          VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                          AutomationProperties.AccessibilityView="Raw"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!-- Custom Style for MenuFlyoutPresenter -->
+        <Style x:Key="MenuFlyoutPresenterStyleQuickMenu" TargetType="MenuFlyoutPresenter">
+            <Setter Property="Background" Value="#607D8B"/>
+        </Style>
+        <!-- Custom Style for "Pivot" buttons -->
+        <Style TargetType="Button" x:Key="CustomButtonStyle">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#fff" />
+            <Setter Property="Padding" Value="35 0"/>
+            <Setter Property="BorderThickness" Value="0,0,1,0"/>
+            <Setter Property="BorderBrush" Value="#BDBDBD"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid x:Name="RootGrid" 
+                          Background="{TemplateBinding Background}">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <Storyboard>
+                                            <PointerUpThemeAnimation Storyboard.TargetName="RootGrid" />
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="PointerOver">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid"
+                                                     Storyboard.TargetProperty="Background">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#8BC34A" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
+                                                     Storyboard.TargetProperty="Foreground">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#fff" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <PointerUpThemeAnimation Storyboard.TargetName="RootGrid" />
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <ContentPresenter x:Name="ContentPresenter"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Content="{TemplateBinding Content}"
+                            ContentTransitions="{TemplateBinding ContentTransitions}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                            Padding="{TemplateBinding Padding}"
+                            HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                            AutomationProperties.AccessibilityView="Raw"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!-- Custom Style for "Pivot" buttons as Inactive -->
+        <Style TargetType="Button" x:Key="PivotHeaderStyleInactive">
+            <Setter Property="Background" Value="#BDBDBD"/>
+            <Setter Property="Foreground" Value="#fff" />
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="Margin" Value="0 0 25 0"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid x:Name="RootGrid" 
+                          Background="{TemplateBinding Background}">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <Storyboard>
+                                            <PointerUpThemeAnimation Storyboard.TargetName="RootGrid" />
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="PointerOver">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid"
+                                                     Storyboard.TargetProperty="Background">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#607D8B" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
+                                                     Storyboard.TargetProperty="Foreground">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#fff" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <PointerUpThemeAnimation Storyboard.TargetName="RootGrid" />
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid"
+                                                     Storyboard.TargetProperty="Background">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#455A64" />
+                                            </ObjectAnimationUsingKeyFrames>
+
+                                            <PointerDownThemeAnimation Storyboard.TargetName="RootGrid" />
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <ContentPresenter x:Name="ContentPresenter"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Content="{TemplateBinding Content}"
+                            ContentTransitions="{TemplateBinding ContentTransitions}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                            Padding="{TemplateBinding Padding}"
+                            HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                            AutomationProperties.AccessibilityView="Raw"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!-- Custom Style for "Pivot" buttons as Active -->
+        <Style TargetType="Button" x:Key="PivotHeaderStyleActive">
+            <Setter Property="Background" Value="#8BC34A"/>
+            <Setter Property="Foreground" Value="#fff" />
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="Margin" Value="0 0 25 0"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid x:Name="RootGrid" 
+                          Background="{TemplateBinding Background}">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <Storyboard>
+                                            <PointerUpThemeAnimation Storyboard.TargetName="RootGrid" />
+                                        </Storyboard>
+                                    </VisualState>
+
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid"
+                                                     Storyboard.TargetProperty="Background">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#455A64" />
+                                            </ObjectAnimationUsingKeyFrames>
+
+                                            <PointerDownThemeAnimation Storyboard.TargetName="RootGrid" />
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <ContentPresenter x:Name="ContentPresenter"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Content="{TemplateBinding Content}"
+                            ContentTransitions="{TemplateBinding ContentTransitions}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                            Padding="{TemplateBinding Padding}"
+                            HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                            AutomationProperties.AccessibilityView="Raw"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!-- MenuflyoutItems -->
+        <MenuFlyout x:Key="DeclarativeAttachedFlyout_Lager" MenuFlyoutPresenterStyle="{StaticResource MenuFlyoutPresenterStyleQuickMenu}" >
+            <MenuFlyoutItem Text="Opgavekø" Foreground="#fff">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:NavigateToPageAction TargetPage="OsOs.View.Lager.OpgavekoView"/>
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </MenuFlyoutItem>
+            <MenuFlyoutItem Text="Indlægning" Foreground="#fff">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:NavigateToPageAction TargetPage="OsOs.View.Lager.IndlagningView"/>
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </MenuFlyoutItem>
+            <MenuFlyoutItem Text="Omflyt" Foreground="#fff">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:NavigateToPageAction TargetPage="OsOs.View.Lager.OmflytningView"/>
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </MenuFlyoutItem>
+            <MenuFlyoutItem Text="Udtag" Foreground="#fff">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:NavigateToPageAction TargetPage="OsOs.View.Lager.UdtagView"/>
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </MenuFlyoutItem>
+        </MenuFlyout>
+
+        <MenuFlyout x:Key="DeclarativeAttachedFlyout_Ordre" MenuFlyoutPresenterStyle="{StaticResource MenuFlyoutPresenterStyleQuickMenu}">
+            <MenuFlyoutItem Text="Ordreplanlægning" Foreground="#fff">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:NavigateToPageAction TargetPage="OsOs.View.Ordre.OrdreOversigtView"/>
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </MenuFlyoutItem>
+            <MenuFlyoutItem Text="Kundeordre" Foreground="#fff">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:NavigateToPageAction TargetPage="OsOs.View.Ordre.KundeOrdreView"/>
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </MenuFlyoutItem>
+        </MenuFlyout>
+
+        <MenuFlyout x:Key="DeclarativeAttachedFlyout_Rapport" MenuFlyoutPresenterStyle="{StaticResource MenuFlyoutPresenterStyleQuickMenu}">
+            <MenuFlyoutItem Text="Saldoliste" Foreground="#fff">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:NavigateToPageAction TargetPage="OsOs.View.Rapport.SaldolisteView"/>
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </MenuFlyoutItem>
+            <MenuFlyoutItem Text="Udleveringsliste" Foreground="#fff">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:NavigateToPageAction TargetPage="OsOs.View.Rapport.UdleveringslisteView"/>
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </MenuFlyoutItem>
+            <MenuFlyoutItem Text="Logliste" Foreground="#fff">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:NavigateToPageAction TargetPage="OsOs.View.Rapport.LoglisteView"/>
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </MenuFlyoutItem>
+        </MenuFlyout>
+
+        <MenuFlyout x:Key="DeclarativeAttachedFlyout_Grunddata" MenuFlyoutPresenterStyle="{StaticResource MenuFlyoutPresenterStyleQuickMenu}">
+            <MenuFlyoutItem Text="Artikelregister" Foreground="#fff">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:NavigateToPageAction TargetPage="OsOs.View.Grunddata.ArtikelregisterView"/>
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </MenuFlyoutItem>
+            <MenuFlyoutItem Text="Kunder" Foreground="#fff">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:NavigateToPageAction TargetPage="OsOs.View.Grunddata.KunderView"/>
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </MenuFlyoutItem>
+            <MenuFlyoutItem Text="Lagerpladser" Foreground="#fff">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:NavigateToPageAction TargetPage="OsOs.View.Grunddata.LagerpladserView"/>
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </MenuFlyoutItem>
+            <MenuFlyoutItem Text="Enheder" Foreground="#fff">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:NavigateToPageAction TargetPage="OsOs.View.Grunddata.EnhederView"/>
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </MenuFlyoutItem>
+            <MenuFlyoutItem Text="Brugere" Foreground="#fff">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:NavigateToPageAction TargetPage="OsOs.View.Grunddata.BrugereView"/>
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </MenuFlyoutItem>
+        </MenuFlyout>
+        <DataTemplate x:Key="UnitListViewItemTemplate">
+            <Grid>
+                <StackPanel HorizontalAlignment="Stretch">
+                    <TextBlock TextWrapping="Wrap"  HorizontalAlignment="Stretch" Height="20" Width="400" Text="{Binding Unit1}"></TextBlock>
+
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+    <Grid Background="#CFD8DC" x:Name="gridRoot">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <Grid.DataContext>
+            <ViewModel:DataViewModel/>
+        </Grid.DataContext>
+        <!-- ====================================================================== -->
+        <!-- ===== Pop-Up Overlay Box -->
+        <!-- ====================================================================== -->
+        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.RowSpan="2" Canvas.ZIndex="1000" Visibility="{Binding IsVisibleOverlaySearch, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+<!--        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.RowSpan="2" Canvas.ZIndex="1000">-->
+
+                <Rectangle VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="Black" Opacity="0.7">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="PointerPressed">
+                        <core:InvokeCommandAction Command="{Binding CloseOverlaySearchCommand}"/>
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </Rectangle>
+            <Grid Width="500" Height="500" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#607D8B" Canvas.ZIndex="1000">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="24"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="50"/>
+
+                </Grid.RowDefinitions>
+                <AppBarButton Icon="Cancel" Foreground="#fff" Background="#F44336" HorizontalAlignment="Right" Width="80" Height="48" Margin="0 -12 -20 -12" RenderTransformOrigin="0.5,0.5">
+                    <AppBarButton.RenderTransform>
+                        <CompositeTransform ScaleX="-0.5" ScaleY="0.5"/>
+                    </AppBarButton.RenderTransform>
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Click">
+                            <core:InvokeCommandAction Command="{Binding CloseOverlaySearchCommand}"/>
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                </AppBarButton>
+                <TextBlock VerticalAlignment="Center" Foreground="#fff" Grid.Row="1" Margin="10 0" FontSize="20" Text="{Binding OverlaySearchHeader, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
+                <TextBox Grid.Row="2" VerticalAlignment="Center" Margin="10 0" Text="{Binding OverlaySearchTerm, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <ListView Grid.Row="3" Margin="10" Background="#CFD8DC" SelectedItem="{Binding SelectedItemUnit, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding FilteredUnits,  Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Visibility="{Binding IsVisibleUnitList}" ItemTemplate="{StaticResource UnitListViewItemTemplate}"/>
+
+                <Button Content="Ok" Grid.Row="4" Margin="10 0" Command="{Binding SetSelectedUnitCommand, UpdateSourceTrigger=PropertyChanged}" Background="#8BC34A" Foreground="#fff" Padding="15 5"></Button>
+                <Button Content="Annuller" Grid.Row="4" HorizontalAlignment="Right" Margin="10 0" Background="#8BC34A" Foreground="#fff" Padding="15 5" Command="{Binding ClearUnitListViewCommand}"/>
+
+            </Grid>
+        </Grid>
+
+        <Grid Height="50"
+              Grid.Row="0"
+              Background="#455A64">
+            <StackPanel Orientation="Horizontal"
+                        VerticalAlignment="Top"
+                        Height="50"
+                        Background="#455A64">
+
+                <Button HorizontalAlignment="Stretch"
+                        Style="{StaticResource CustomButtonStyle}"
+                        Padding="15 5">
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Click">
+                            <core:NavigateToPageAction TargetPage="OsOs.View.ForsideView" />
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                    <Image Source="../../Assets/ViewImg/OsOs_white.png"
+                           Height="30" />
+                </Button>
+                <Button Content="Lager"
+                        Flyout="{StaticResource DeclarativeAttachedFlyout_Lager}"
+                        Style="{StaticResource CustomButtonStyle}"
+                        Visibility="{Binding LagerSmallView}" />
+                <Button Content="Ordre"
+                        Flyout="{StaticResource DeclarativeAttachedFlyout_Ordre}"
+                        Style="{StaticResource CustomButtonStyle}"
+                        Visibility="{Binding OrderSmallView}" />
+                <Button Content="Rapporter"
+                        Flyout="{StaticResource DeclarativeAttachedFlyout_Rapport}"
+                        Style="{StaticResource CustomButtonStyle}"
+                        Visibility="{Binding ReportSmallView}" />
+                <Button Content="Grunddata"
+                        Flyout="{StaticResource DeclarativeAttachedFlyout_Grunddata}"
+                        Style="{StaticResource CustomButtonStyle}"
+                        Visibility="{Binding GrundSmallView}" />
+
+            </StackPanel>
+            <Button HorizontalAlignment="Right"
+                    Content="Logud"
+                    Foreground="#fff"
+                    Background="#8BC34A"
+                    Padding="15 5"
+                    Margin="0 0 15 0"
+                    Command="{Binding}">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:NavigateToPageAction TargetPage="OsOs.MainPage" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </Button>
+        </Grid>
+        
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Grunddata" FontSize="40" Grid.Column="1" VerticalAlignment="Center"/>
+            <Grid Grid.Column="1" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Content="Artikelregister" Style="{StaticResource PivotHeaderStyleInactive}">
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Click">
+                            <core:NavigateToPageAction TargetPage="OsOs.View.Grunddata.ArtikelregisterView"/>
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                </Button>
+                <Button Grid.Column="1" Content="Kunder" Style="{StaticResource PivotHeaderStyleInactive}">
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Click">
+                            <core:NavigateToPageAction TargetPage="OsOs.View.Grunddata.KunderView"/>
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                </Button>
+                <Button Grid.Column="2" Content="Lagerplads" Style="{StaticResource PivotHeaderStyleInactive}">
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Click">
+                            <core:NavigateToPageAction TargetPage="OsOs.View.Grunddata.LagerpladserView"/>
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                </Button>
+                <Button Grid.Column="3" Content="Enheder" Style="{StaticResource PivotHeaderStyleActive}">
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Click">
+                            <core:NavigateToPageAction TargetPage="OsOs.View.Grunddata.EnhederView"/>
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                </Button>
+                <Button Grid.Column="4" Content="Brugere" Style="{StaticResource PivotHeaderStyleInactive}">
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Click">
+                            <core:NavigateToPageAction TargetPage="OsOs.View.Grunddata.BrugereView"/>
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                </Button>
+
+            </Grid>
+            <Grid BorderThickness="2" BorderBrush="#8BC34A" Grid.Column="1" Grid.Row="2" Background="#fff">
+                <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="680"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Margin="20 0" VerticalAlignment="Center" Text="Enhed"/>
+                        <TextBox Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Text="{Binding UnitName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Left" Width="300"/>
+                        <ToggleButton IsChecked="{Binding ToggleVisibilityUnitList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="0" Margin="310 0 0 0" Content="Søg Enhed" IsThreeState="False"/>
+
+
+                        <Button Content="Ok" Command="{Binding SubmitUnit}" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="20 0" Background="#8BC34A" Foreground="#fff"/>
+                        <Button Content="Slet" Command="{Binding OneDeleteButtonToRuleThemAllCommand}" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20 0" Width="160" Background="#8BC34A" Foreground="#fff"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Page>
